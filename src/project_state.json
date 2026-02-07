@@ -1,0 +1,111 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 7,
+  "summary": "App to periodically generate mouse movement to prevent the PC from sleeping/hibernating.",
+  "architectural_notes": [
+    "Production deployment domain names must be 5–50 characters and contain only letters, numbers, and hyphens (no parentheses or other symbols).",
+    "Use production domain name \"awake01\" for deployment."
+  ],
+  "known_issues": [
+    "Production deployment failed due to invalid domain name not meeting allowed format/length constraints."
+  ],
+  "isFixRequest": true,
+  "existing_features": [
+    {
+      "id": "feature-create-a-single-page-app-ui-that-lets-the-user-prevent-the-computer-display-from-sleeping-while-the-page-is-open-with-controls-for-start-stop-an-optional-duration-e-g-15-30-60-minutes-or-unlimited-and-a-visible-status-indicator-running-stopped-expired-unsupported",
+      "title": "Create a single-page app UI that lets the user prevent the computer display from sleeping while the page is open, with controls for Start/Stop, an optional duration (e.g., 15/30/60 minutes or unlimited), and a visible status indicator (Running/Stopped/Expired/Unsupported).",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-keep-awake-behavior-using-the-screen-wake-lock-api-navigator-wakelock-when-available-including-proper-release-on-stop-page-visibility-changes-and-tab-window-close-when-wake-lock-is-not-supported-or-fails-show-a-clear-fallback-message-explaining-that-browsers-cannot-move-the-os-mouse-cursor-and-that-the-app-cannot-guarantee-preventing-sleep-on-all-systems",
+      "title": "Implement keep-awake behavior using the Screen Wake Lock API (navigator.wakeLock) when available, including proper release on Stop, page visibility changes, and tab/window close; when Wake Lock is not supported or fails, show a clear fallback message explaining that browsers cannot move the OS mouse cursor and that the app cannot guarantee preventing sleep on all systems.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-small-settings-section-to-configure-1-auto-start-on-page-load-toggle-2-default-duration-and-3-whether-to-keep-the-screen-awake-only-while-the-tab-is-visible-toggle-persist-these-settings-in-localstorage",
+      "title": "Add a small Settings section to configure: (1) auto-start on page load (toggle), (2) default duration, and (3) whether to keep the screen awake only while the tab is visible (toggle). Persist these settings in localStorage.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-coherent-creative-visual-theme-colors-typography-spacing-and-component-styling-suitable-for-a-simple-utility-app-and-enforce-it-consistently-across-the-page-avoid-a-blue-purple-dominant-palette",
+      "title": "Apply a coherent, creative visual theme (colors, typography, spacing, and component styling) suitable for a simple utility app, and enforce it consistently across the page (avoid a blue/purple-dominant palette).",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-small-static-illustration-logo-asset-and-display-it-in-the-app-header",
+      "title": "Add a small static illustration/logo asset and display it in the app header.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-user-facing-toggle-to-enable-or-disable-the-periodic-mouse-movement-mouse-jiggle-behavior-and-persist-the-toggle-value-in-the-same-localstorage-backed-settings-model-used-by-the-existing-keep-awake-settings",
+      "title": "Add a user-facing toggle to enable or disable the periodic mouse-movement (“mouse jiggle”) behavior, and persist the toggle value in the same localStorage-backed settings model used by the existing keep-awake settings.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-periodic-mouse-movement-behavior-on-the-frontend-that-runs-only-while-the-app-is-in-the-running-state-and-the-new-setting-is-enabled-ensure-it-starts-on-start-stops-on-stop-expire-and-is-cleaned-up-on-page-hide-unload-to-avoid-orphaned-intervals",
+      "title": "Implement periodic mouse-movement behavior on the frontend that runs only while the app is in the Running state AND the new setting is enabled; ensure it starts on Start, stops on Stop/Expire, and is cleaned up on page hide/unload to avoid orphaned intervals.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-clear-user-facing-explanatory-text-near-the-mouse-movement-toggle-describing-the-limitation-that-browsers-may-not-be-able-to-move-the-os-cursor-and-that-the-feature-may-not-prevent-sleep-hibernate-on-all-systems-consistent-with-the-app-s-existing-guidance-about-browser-limitations",
+      "title": "Add clear user-facing explanatory text near the mouse-movement toggle describing the limitation that browsers may not be able to move the OS cursor and that the feature may not prevent sleep/hibernate on all systems, consistent with the app’s existing guidance about browser limitations.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-retry-production-deployment-using-the-domain-name-awake01-and-only-that-domain-change-so-the-deployment-meets-the-platform-domain-naming-rules-5-50-characters-letters-numbers-and-hyphens-only-and-completes-successfully",
+      "title": "Retry production deployment using the domain name \"awake01\" (and only that domain change) so the deployment meets the platform domain naming rules (5–50 characters; letters, numbers, and hyphens only) and completes successfully.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create an app that generates periodic mouse movement so the PC does not sleep/hibernate.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Add a user-facing toggle to enable/disable the periodic mouse-movement behavior.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Add a small UI indicator showing when mouse-movement (“jiggle”) mode is active.",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Keep-awake web app (prevent sleep) with Wake Lock and timer controls",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

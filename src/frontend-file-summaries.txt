@@ -1,0 +1,18 @@
+{
+  "frontend/src/App.tsx": "Main application component that orchestrates the keep-awake functionality with Wake Lock API, timer controls, settings management, mouse-jiggle behavior, and responsive UI layout with header and footer.",
+  "frontend/src/components/StatusIndicator.tsx": "Badge component that displays the current app state (running, stopped, expired, unsupported, or error) with appropriate icons and colors.",
+  "frontend/src/components/DurationControl.tsx": "Duration selection component with preset buttons (15/30/60 minutes and unlimited) for configuring keep-awake timer length.",
+  "frontend/src/components/SettingsPanel.tsx": "Settings card component with toggles for auto-start, only-while-visible, and mouse-movement behavior, plus default duration selection dropdown and helper text explaining browser limitations.",
+  "frontend/src/components/UnsupportedNotice.tsx": "Alert component that explains Wake Lock API unavailability and browser security restrictions preventing OS-level mouse movement.",
+  "frontend/src/hooks/useWakeLock.ts": "Custom hook that manages Screen Wake Lock API requests, releases, and error handling with proper cleanup.",
+  "frontend/src/hooks/useCountdownTimer.ts": "Custom hook that implements a countdown timer with start/stop/reset controls and expiration callback.",
+  "frontend/src/hooks/usePageLifecycle.ts": "Custom hook that tracks page visibility and handles beforeunload/pagehide events for proper resource cleanup.",
+  "frontend/src/hooks/useLocalStorageState.ts": "Generic hook for persisting state to localStorage with JSON serialization and cross-tab synchronization.",
+  "frontend/src/hooks/useKeepAwakeSettings.ts": "Custom hook that manages keep-awake settings (auto-start, default duration, only-while-visible, and mouse-jiggle-enabled) with localStorage persistence and backward compatibility for older stored settings.",
+  "frontend/src/hooks/useQueries.ts": "Placeholder file for React Query hooks; intentionally minimal as all state is client-side.",
+  "frontend/src/index.css": "Global styles with warm coffee-inspired OKLCH color palette for both light and dark modes, avoiding blue/purple dominance.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with warm color tokens, custom border radius, soft shadows, and system font stack.",
+  "frontend/src/hooks/useMouseJiggle.ts": "Custom hook that dispatches periodic synthetic mousemove events within the browser when enabled and running, respecting visibility settings and cleaning up intervals on unmount and page unload.",
+  "frontend/deployment/domain.json": "JSON configuration file specifying the production deployment domain \"awake01\" with platform naming rules documentation.",
+  "frontend/deployment/README.md": "Deployment documentation explaining the domain configuration, platform naming requirements, and redeployment instructions for the Keep Awake application."
+}

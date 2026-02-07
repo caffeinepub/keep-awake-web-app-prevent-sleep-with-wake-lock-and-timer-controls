@@ -1,0 +1,40 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-07T23:32:35.912Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 1,
+    "implemented": 1,
+    "items": [
+      {
+        "id": "REQ-9",
+        "summary": "Retry production deployment using the domain name \"awake01\" (and only that domain change) so the deployment meets the platform domain naming rules (5–50 characters; letters, numbers, and hyphens only) and completes successfully.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/deployment/domain.json",
+          "frontend/deployment/README.md"
+        ],
+        "matchedFiles": [
+          "frontend/deployment/domain.json",
+          "frontend/deployment/README.md"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "build-request.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/deployment/README.md",
+    "frontend/deployment/domain.json",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

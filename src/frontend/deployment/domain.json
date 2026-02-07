@@ -1,0 +1,9 @@
+{
+  "domain": "awake01",
+  "description": "Production deployment domain for Keep Awake application",
+  "rules": {
+    "minLength": 5,
+    "maxLength": 50,
+    "allowedCharacters": "letters, numbers, and hyphens only"
+  }
+}

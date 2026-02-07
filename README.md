@@ -1,2 +1,3 @@
-# keep-awake-web-app-prevent-sleep-with-wake-lock-and-timer-controls
-Exported from Caffeine project: Keep-awake web app (prevent sleep) with Wake Lock and timer controls
+## 
+
+To run app build and run docker image: `docker build -t app . docker run -it --network host app`

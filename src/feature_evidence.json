@@ -1,0 +1,24 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-retry-production-deployment-using-the-domain-name-awake01-and-only-that-domain-change-so-the-deployment-meets-the-platform-domain-naming-rules-5-50-characters-letters-numbers-and-hyphens-only-and-completes-successfully",
+      "featureTitle": "Retry production deployment using the domain name \"awake01\" (and only that domain change) so the deployment meets the platform domain naming rules (5–50 characters; letters, numbers, and hyphens only) and completes successfully.",
+      "files": [
+        "frontend/deployment/README.md",
+        "frontend/deployment/domain.json"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-9"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Retry production deployment with domain awake01",
+  "requirements": [
+    {
+      "id": "REQ-9",
+      "summary": "Set production deployment domain to \"awake01\" (only domain change) to satisfy naming rules and allow a successful redeploy.",
+      "acceptanceCriteria": [
+        "Production deployment is triggered with the domain set to \"awake01\".",
+        "The domain \"awake01\" is accepted by the deployment validator (length and character rules).",
+        "Deployment completes successfully and the app is reachable at the resulting production URL for domain \"awake01\"."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/deployment/domain.json",
+          "operation": "create",
+          "description": "Create a single-source deployment domain config containing only the production domain value \"awake01\" so the deployment process can be re-run without any application feature/UI changes. (No component usage.)"
+        },
+        {
+          "path": "frontend/deployment/README.md",
+          "operation": "create",
+          "description": "Add minimal redeploy instructions stating that production must be redeployed with domain \"awake01\" and that no other app/UI changes should be made; document the platform naming rules (5–50 chars; letters, numbers, hyphens only). (No component usage.)"
+        }
+      ]
+    }
+  ]
+}

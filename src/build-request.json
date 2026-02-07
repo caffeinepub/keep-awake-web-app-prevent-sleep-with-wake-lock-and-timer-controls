@@ -1,0 +1,37 @@
+{
+  "kind": "build_request",
+  "title": "Retry production deployment with domain awake01",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-9",
+      "text": "Retry production deployment using the domain name \"awake01\" (and only that domain change) so the deployment meets the platform domain naming rules (5–50 characters; letters, numbers, and hyphens only) and completes successfully.",
+      "target": "unknown",
+      "source": {
+        "messageIds": [
+          "msg-11"
+        ],
+        "quotes": [
+          "Yes Lets try prod deployment jus change de domain name to awake01"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Production deployment is triggered with the domain set to \"awake01\".",
+        "The domain \"awake01\" is accepted by the deployment validator (length and character rules).",
+        "Deployment completes successfully and the app is reachable at the resulting production URL for domain \"awake01\"."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not change application features or UI behavior; only adjust the production deployment domain to \"awake01\" and re-deploy.",
+    "Use English for any user-facing text."
+  ],
+  "nonGoals": [
+    "Adding new keep-awake features, settings, or UI indicators.",
+    "Backend changes (the backend actor can remain empty)."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}
